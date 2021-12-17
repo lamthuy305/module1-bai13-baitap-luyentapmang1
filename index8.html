@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 5, 3, 4, 6, 8, 7];
+    let newArr = [];
+    let index;
+    let max;
+    const doDaiMang = arr.length;
+    for (let i = 0; i < doDaiMang; i++) {
+        max = arr[0];
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > max) {
+                max = arr[j];
+                index = j
+            }
+        }
+        newArr[i] = max;
+
+        for (index; index < arr.length; index++) {
+            arr[index] = arr[index + 1];
+        }
+        arr.pop();
+    }
+    document.write(newArr)
+</script>
+</body>
+</html>

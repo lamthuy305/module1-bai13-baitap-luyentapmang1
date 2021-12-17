@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [5,2,1,6,21,-9,52,1,45,15,20,1,3,10,52,52];
+    let max = arr[0]
+    let index = "vị trí là ";
+    let count = 0;
+    let sum = 0;
+    let trungBinhCong = 0;
+    for (let i = 0 ; i < arr.length ; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    for (i = 0 ; i < arr.length ; i++) {
+        if (max === arr[i]) {
+            count ++;
+            index += i + ", "
+        }
+    }
+    // sum = eval(arr.join("+"));
+    // trungBinhCong = sum / arr.length;
+    // alert(trungBinhCong);
+    for (i = 0 ; i < arr.length ; i++) {
+        sum += i;
+        trungBinhCong = sum / arr.length;
+    }
+    document.write("Gia trị lớn nhất trong bảng là: " + max + " tại " + count + " " + index + "<br>" + "Trung bình cộng của mảng là: " + trungBinhCong);
+</script>
+</body>
+</html>
