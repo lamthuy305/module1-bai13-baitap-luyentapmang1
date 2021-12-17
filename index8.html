@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let arr = [1, 2, 5, 3, 4, 6, 8, 7];
+    let arr = [100,1, 2, 5, 3, 4, 6, 8, 7,5,2,4,5,564,88,4];
     let newArr = [];
     let index;
     let max;
@@ -14,7 +14,7 @@
     for (let i = 0; i < doDaiMang; i++) {
         max = arr[0];
         for (let j = 0; j < arr.length; j++) {
-            if (arr[j] > max) {
+            if (arr[j] >= max) {
                 max = arr[j];
                 index = j
             }
